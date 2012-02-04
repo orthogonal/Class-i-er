@@ -7,7 +7,7 @@
     xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="728"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -16,32 +16,22 @@
 
     <!--LayoutRoot contains the root grid where all other page content is placed-->
     <Grid x:Name="LayoutRoot">
-        <controls:Panorama Title="Class-i-er" Width="480" HorizontalAlignment="Left" Background="{x:Null}">
+        <controls:Pivot x:Name="Piv" Title="Class-i-er" Width="480" HorizontalAlignment="Left" Background="{x:Null}">
 
-            <!--Panorama item one-->
-            <controls:PanoramaItem Header="Monday">
-                <Grid>
-                    <Button Content="Class 1" Margin="0,44,8,0" VerticalAlignment="Top" Height="149" Click="Button_Click" />
-                    <Button Content="Change" Height="72" HorizontalAlignment="Left" Margin="114,211,0,0" Name="button1" VerticalAlignment="Top" Width="160" Click="button1_Click" />
-                </Grid>
-            </controls:PanoramaItem>
+            <!--Pivot item one-->
 
-            <!--Panorama item two-->
-            <controls:PanoramaItem Header="Tuesday">
-                <Grid/>
-            </controls:PanoramaItem>
-            <controls:PanoramaItem Header="Wednesday">
-                <Grid/>
-            </controls:PanoramaItem>
-            <controls:PanoramaItem Header="Thursday">
-                <Grid/>
-            </controls:PanoramaItem>
-            <controls:PanoramaItem Header="Friday">
-                <Grid/>
-            </controls:PanoramaItem>
-        </controls:Panorama>
+            <!--Pivot item two-->
+            <controls:PivotItem Header="Test Day">
+                <Grid></Grid>
+            </controls:PivotItem>
+        </controls:Pivot>
     </Grid>
 
-    <!--Panorama-based applications should not show an ApplicationBar-->
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/icons/appbar.add.rest.png" Text="Add Class" Click="ApplicationBarIconButton_Click"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>

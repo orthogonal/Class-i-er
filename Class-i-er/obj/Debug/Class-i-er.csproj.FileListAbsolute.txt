@@ -16,3 +16,7 @@ C:\Users\Andrew\Documents\Visual Studio 2010\Projects\Class-i-er\Class-i-er\obj\
 C:\Users\Andrew\Documents\Visual Studio 2010\Projects\Class-i-er\Class-i-er\Bin\Debug\Microsoft.Phone.Controls.dll
 C:\Users\Andrew\Documents\Visual Studio 2010\Projects\Class-i-er\Class-i-er\Bin\Debug\Microsoft.Phone.Controls.xml
 C:\Users\Andrew\Documents\Visual Studio 2010\Projects\Class-i-er\Class-i-er\obj\Debug\addnew.g.i.cs
+C:\Users\Andrew\Documents\Visual Studio 2010\Projects\Class-i-er\Class-i-er\obj\Debug\TimeSlot.g.i.cs
+C:\Users\Andrew\documents\visual studio 2010\Projects\Class-i-er\Class-i-er\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
+C:\Users\Andrew\documents\visual studio 2010\Projects\Class-i-er\Class-i-er\Bin\Debug\Microsoft.Phone.Controls.Toolkit.pdb
+C:\Users\Andrew\documents\visual studio 2010\Projects\Class-i-er\Class-i-er\Bin\Debug\Microsoft.Phone.Controls.Toolkit.xml

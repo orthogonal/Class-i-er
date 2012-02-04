@@ -2,5 +2,6 @@
   <Deployment.Parts>
     <AssemblyPart x:Name="Class-i-er" Source="Class-i-er.dll" />
     <AssemblyPart x:Name="Microsoft.Phone.Controls" Source="Microsoft.Phone.Controls.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls.Toolkit" Source="Microsoft.Phone.Controls.Toolkit.dll" />
   </Deployment.Parts>
 </Deployment>

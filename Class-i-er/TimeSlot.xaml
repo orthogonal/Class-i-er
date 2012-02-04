@@ -1,5 +1,5 @@
 ﻿<phone:PhoneApplicationPage 
-    x:Class="Class_i_er.addnew"
+    x:Class="Class_i_er.TimeSlot"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
@@ -11,7 +11,7 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True" xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -21,19 +21,16 @@
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="PageTitle" Text="New Class" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" FontFamily="Verdana" />
-        </StackPanel>
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28"></StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBox Height="72" HorizontalAlignment="Left" Margin="88,55,0,0" Name="textBox1" Text="" VerticalAlignment="Top" Width="380" />
-            <Button Content="Button" Height="72" HorizontalAlignment="Left" Margin="157,0,0,0" Name="button1" VerticalAlignment="Top" Width="Auto" Click="button1_Click" />
-            <TextBlock Height="44" HorizontalAlignment="Left" Margin="9,72,0,0" Name="textBlock1" Text="Title:" VerticalAlignment="Top" FontSize="28" Width="138" />
-            <TextBlock Height="41" HorizontalAlignment="Left" Margin="9,148,0,0" Name="textBlock2" Text="Code:" VerticalAlignment="Top" FontSize="28" Width="154" />
-            <TextBox Height="72" HorizontalAlignment="Left" Margin="88,133,0,0" Name="textBox2" Text="" VerticalAlignment="Top" Width="380" />
-            <TextBlock FontSize="28" Height="41" HorizontalAlignment="Left" Margin="9,226,0,0" Name="textBlock3" Text="Times:" VerticalAlignment="Top" Width="154" />
-            <Button Content="Add New" Height="72" HorizontalAlignment="Left" Margin="-12,273,0,0" Name="button2" VerticalAlignment="Top" Width="160" Click="button2_Click" />
+        <Grid x:Name="ContentPanel" Margin="12,0" Grid.RowSpan="2">
+            <TextBlock Height="35" HorizontalAlignment="Left" Margin="6,480,0,0" Name="textBlock1" Text="Start Time:" VerticalAlignment="Top" Width="173" FontSize="26" FontFamily="Verdana" />
+            <TextBlock FontFamily="Verdana" FontSize="26" Height="35" HorizontalAlignment="Left" Margin="0,563,0,0" Name="textBlock2" Text="Finish Time:" VerticalAlignment="Top" Width="173" />
+            <Slider Height="84" HorizontalAlignment="Left" Margin="169,473,0,0" Name="slider1" VerticalAlignment="Top" Width="287" />
+            <Slider Height="84" HorizontalAlignment="Left" Margin="169,551,0,0" Name="slider2" VerticalAlignment="Top" Width="287" />
+            <Button Content="Add" Height="72" HorizontalAlignment="Left" Margin="136,653,0,0" Name="button1" VerticalAlignment="Top" Width="160" Click="button1_Click" />
+            <toolkit:ListPicker Height="100" HorizontalAlignment="Left" Margin="130,132,0,0" Name="listPicker1" VerticalAlignment="Top" Width="200" />
         </Grid>
     </Grid>
  

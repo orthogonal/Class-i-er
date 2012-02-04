@@ -30,7 +30,14 @@ namespace Class_i_er
         [ColumnAttribute(IsDbGenerated = false)]
         public string className {get; set; }
         public string classCode { get; set; }
-        public int startTime { get; set; }
-        public int endTime { get; set; }
+    }
+
+    [TableAttribute(Name = "ClassItems")]
+    public class ClassTime
+    {
+        public int id {get; set; }
+        public int day {get; set; }
+        public int start {get; set; }
+        public int finish {get; set; }
     }
 }

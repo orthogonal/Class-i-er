@@ -18,27 +18,69 @@ namespace Class_i_er
         public schedule()
         {
             InitializeComponent();
+
+            PivotItem[] daysPanels = new PivotItem[7];
+            for (int i = 0; i < 7; i++)
+            {
+                daysPanels[i] = new PivotItem();
+                Grid baseGrid = new Grid();
+                ListBox classList = new ListBox();
+                baseGrid.Children.Add(classList);
+
+                //Add Weekend Text
+                bool noClasses = true; //temporary
+                if (noClasses && (i == 0 || i == 6))
+                {
+                    //    ImageSource WKsource = "weekendimage.jpg";
+                    //    ImageBrush weekendBrush = new ImageBrush();
+                    //    weekendBrush.ImageSource = WKsource;
+                    //    weekendBrush.Stretch = "Fill";
+                    //    baseGrid.Background = weekendBrush;
+                }
+
+                // If classes exist in the schedule database, add them now to the schedule grid
+                /*bool noclasses=false; //tempoary
+                if (noclasses)
+                {
+                    Button addClass = new Button();
+                    addClass.Width = 170;
+                    addClass.Height = 72;
+                    addClass.Content = "Add Class";
+                    baseGrid.Children.Add(addClass);
+                }*/
+                daysPanels[i].Content = baseGrid;
+            }
+
+            daysPanels[0].Header = "Sunday";
+            daysPanels[1].Header = "Monday";
+            daysPanels[2].Header = "Tuesday";
+            daysPanels[3].Header = "Wednesday";
+            daysPanels[4].Header = "Thursday";
+            daysPanels[5].Header = "Friday";
+            daysPanels[6].Header = "Saturday";
+
+
+
+
+            for (int i = 0; i < 7; i++)
+            {
+                Piv.Items.Add(daysPanels[i]);
+            }
+
+            var classids = (from c in MainPage.mydatabase.ClassItems
+                            select c.id);
+            foreach (int id in classids)
+            {
+                TextBox foo = new TextBox();
+                foo.Text = " " + id + " ";
+                ((Grid)daysPanels[id].Content).Children.Add(foo);
+            }
+
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ApplicationBarIconButton_Click(object sender, EventArgs e)
         {
             NavigationService.Navigate(new Uri("/addnew.xaml", UriKind.Relative));
-        }
-
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
-            var foo = (from c in MainPage.mydatabase.ClassItems
-                               select c.className
-                              );
-            String text1 = "";
-            int i = 0;
-            foreach (String s in foo)
-            {
-                if (i > 0) text1 += " ";
-                text1 += s;
-                i++;
-            }
-            button1.Content = text1;
         }
     }
 }
