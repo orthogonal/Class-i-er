@@ -25,8 +25,9 @@ namespace Class_i_er
     [TableAttribute(Name = "ClassItems")]
     public class ClassItem
     {
-        [ColumnAttribute(IsPrimaryKey=true)]
+        [ColumnAttribute(IsPrimaryKey=true, DbType="int not null Identity", IsDbGenerated = true)]
         public int id {get; set; }
+        [ColumnAttribute(IsDbGenerated = false)]
         public string className {get; set; }
         public string classCode { get; set; }
         public int startTime { get; set; }

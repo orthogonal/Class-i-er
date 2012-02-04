@@ -27,10 +27,18 @@ namespace Class_i_er
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            button1.Content = (from c in MainPage.mydatabase.ClassItems
-                               where c.id == 0
+            var foo = (from c in MainPage.mydatabase.ClassItems
                                select c.className
-                              ).FirstOrDefault();
+                              );
+            String text1 = "";
+            int i = 0;
+            foreach (String s in foo)
+            {
+                if (i > 0) text1 += " ";
+                text1 += s;
+                i++;
+            }
+            button1.Content = text1;
         }
     }
 }
