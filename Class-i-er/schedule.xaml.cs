@@ -19,5 +19,18 @@ namespace Class_i_er
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/addnew.xaml", UriKind.Relative));
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            button1.Content = (from c in MainPage.mydatabase.ClassItems
+                               where c.id == 0
+                               select c.className
+                              ).FirstOrDefault();
+        }
     }
 }

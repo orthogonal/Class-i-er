@@ -21,7 +21,8 @@
             <!--Panorama item one-->
             <controls:PanoramaItem Header="Monday">
                 <Grid>
-                    <Button Content="Class 1" Margin="0,44,8,0" VerticalAlignment="Top" Height="149"/>
+                    <Button Content="Class 1" Margin="0,44,8,0" VerticalAlignment="Top" Height="149" Click="Button_Click" />
+                    <Button Content="Change" Height="72" HorizontalAlignment="Left" Margin="114,211,0,0" Name="button1" VerticalAlignment="Top" Width="160" Click="button1_Click" />
                 </Grid>
             </controls:PanoramaItem>
 
