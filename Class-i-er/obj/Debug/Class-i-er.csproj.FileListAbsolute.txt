@@ -13,3 +13,5 @@ c:\users\andrew\documents\visual studio 2010\Projects\Class-i-er\Class-i-er\Bin\
 c:\users\andrew\documents\visual studio 2010\Projects\Class-i-er\Class-i-er\Bin\Debug\Class_i_er.xap
 c:\users\andrew\documents\visual studio 2010\Projects\Class-i-er\Class-i-er\obj\Debug\XapCacheFile.xml
 C:\Users\Andrew\Documents\Visual Studio 2010\Projects\Class-i-er\Class-i-er\obj\Debug\schedule.g.i.cs
+C:\Users\Andrew\Documents\Visual Studio 2010\Projects\Class-i-er\Class-i-er\Bin\Debug\Microsoft.Phone.Controls.dll
+C:\Users\Andrew\Documents\Visual Studio 2010\Projects\Class-i-er\Class-i-er\Bin\Debug\Microsoft.Phone.Controls.xml

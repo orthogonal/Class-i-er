@@ -25,7 +25,7 @@ namespace Class_i_er
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
             appSettings["firstTime"] = false;
-            NavigationService.Navigate(new Uri("schedule.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/schedule.xaml", UriKind.Relative));
         }
     }
 }
