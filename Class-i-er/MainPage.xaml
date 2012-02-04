@@ -6,30 +6,14 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    mc:Ignorable="d" d:DesignWidth="728" d:DesignHeight="480"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
-    SupportedOrientations="Portrait" Orientation="Portrait"
+    SupportedOrientations="Portrait" Orientation="Landscape"
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
-        <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="page name" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
-        </StackPanel>
-
-        <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0"></Grid>
-    </Grid>
- 
     <!--Sample code showing usage of ApplicationBar-->
     <!--<phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
@@ -41,5 +25,13 @@
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>-->
-
+    <Grid Height="Auto" Name="grid1" Width="Auto" HorizontalAlignment="Center">
+        <TextBlock Height="Auto" HorizontalAlignment="Center" Margin="12,12,0,0" Name="welcomeLabel" Text="Welcome to Class-i-er!" VerticalAlignment="Top" FontFamily="Verdana" FontSize="38" Width="Auto" TextAlignment="Center" />
+        <TextBlock Height="94" HorizontalAlignment="Left" Margin="12,119,0,0" Name="infoLabel" Text="We just need a bit of information about you first." VerticalAlignment="Top" FontFamily="Verdana" FontSize="24" TextAlignment="Left" Width="Auto" TextWrapping="Wrap" />
+        <TextBlock Height="30" HorizontalAlignment="Left" Margin="58,219,0,0" Name="nameLabel" Text="Name: " VerticalAlignment="Top" FontFamily="Verdana" FontSize="28" />
+        <TextBox Height="72" HorizontalAlignment="Left" Margin="169,201,0,0" Name="nameBox" Text="" VerticalAlignment="Top" Width="460" FontSize="25" />
+        <TextBlock FontFamily="Verdana" FontSize="28" Height="30" HorizontalAlignment="Left" Margin="58,300,0,0" Name="schoolLabel" Text="School:" VerticalAlignment="Top" />
+        <TextBox FontSize="25" Height="72" HorizontalAlignment="Left" Margin="169,279,0,0" Name="schoolBox" Text="" VerticalAlignment="Top" Width="460" />
+        <Button Content="Save" Height="72" HorizontalAlignment="Center" Margin="0" Name="btnSubmit" VerticalAlignment="Bottom" Width="160" Click="btnSubmit_Click" />
+    </Grid>
 </phone:PhoneApplicationPage>
