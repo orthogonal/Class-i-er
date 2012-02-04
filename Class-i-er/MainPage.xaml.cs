@@ -21,14 +21,19 @@ namespace Class_i_er
         public MainPage()
         {
             InitializeComponent();
-            if (appSettings["firstTime"])
-                //skip the first page
-                ;
+            if (!appSettings.Contains("firstTime"))
+                appSettings.Add("firstTime", true);
         }
 
-        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
-            appSettings["firstTime"] = true;
+            if (((bool)appSettings["firstTime"]) == true)
+                //? means "make it nullable"
+                //?? means "if it's nothing, make it true"
+                //skip the first page
+                this.NavigationService.Navigate(new Uri("/Init.xaml", UriKind.Relative));
+            else
+                this.NavigationService.Navigate(new Uri("/schedule.xaml", UriKind.Relative));
         }
     }
 }
