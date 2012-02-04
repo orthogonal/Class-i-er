@@ -22,9 +22,9 @@ namespace Class_i_er
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            String input = textBox1.Text;
             ClassItem newItem = new ClassItem();
-            newItem.className = input;
+            newItem.className = textBox1.Text;
+            newItem.classCode = textBox2.Text;
             MainPage.mydatabase.ClassItems.InsertOnSubmit(newItem);
             MainPage.mydatabase.SubmitChanges();
             NavigationService.Navigate(new Uri("/schedule.xaml", UriKind.Relative));

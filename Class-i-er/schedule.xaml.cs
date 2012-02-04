@@ -72,10 +72,20 @@ namespace Class_i_er
             foreach (int id in classids)
             {
                 TextBox foo = new TextBox();
-                foo.Text = " " + id + " ";
-                ((Grid)daysPanels[id].Content).Children.Add(foo);
+                var namesel = (from c in MainPage.mydatabase.ClassItems where c.id == id select c.className);
+                var codesel = (from c in MainPage.mydatabase.ClassItems where c.id == id select c.classCode);
+                foreach (String name in namesel)
+                {
+                    foreach (String code in codesel)
+                    {
+                        foo.Text = " " + name + "\n\r" + code;
+                        foo.Width = 440;
+                        foo.Height = 200;
+                        foo.Background = new SolidColorBrush(Colors.Blue);
+                        ((ListBox)((Grid)daysPanels[1].Content).Children[0]).Items.Add(foo);
+                    }
+                }
             }
-
         }
 
         private void ApplicationBarIconButton_Click(object sender, EventArgs e)
