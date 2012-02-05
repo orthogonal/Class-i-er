@@ -79,12 +79,19 @@
     <Compile Include="Init.xaml.cs">
       <DependentUpon>Init.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PanoramaPage.xaml.cs">
+      <DependentUpon>PanoramaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TimeSelection.xaml.cs" />
     <Compile Include="TimeSlot.xaml.cs">
       <DependentUpon>TimeSlot.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="schedule.xaml.cs">
       <DependentUpon>schedule.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -108,6 +115,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PanoramaPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TimeSelection.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="TimeSlot.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -115,6 +130,10 @@
     <Page Include="schedule.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>

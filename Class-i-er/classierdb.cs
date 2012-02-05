@@ -40,4 +40,13 @@ namespace Class_i_er
         public int start {get; set; }
         public int finish {get; set; }
     }
+
+    [TableAttribute(Name = "ClassItems")]
+    public class Temporary
+    {
+        public int id {get; set; }
+        public int day {get; set; }
+        public int start {get; set; }
+        public int finish {get; set; }
+    }
 }

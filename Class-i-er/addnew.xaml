@@ -28,12 +28,13 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <TextBox Height="72" HorizontalAlignment="Left" Margin="88,55,0,0" Name="textBox1" Text="" VerticalAlignment="Top" Width="380" />
-            <Button Content="Button" Height="72" HorizontalAlignment="Left" Margin="157,0,0,0" Name="button1" VerticalAlignment="Top" Width="Auto" Click="button1_Click" />
+            <Button Content="Add Class" Height="72" HorizontalAlignment="Left" Margin="0,-6,0,0" Name="button1" VerticalAlignment="Top" Width="Auto" Click="button1_Click" />
             <TextBlock Height="44" HorizontalAlignment="Left" Margin="9,72,0,0" Name="textBlock1" Text="Title:" VerticalAlignment="Top" FontSize="28" Width="138" />
             <TextBlock Height="41" HorizontalAlignment="Left" Margin="9,148,0,0" Name="textBlock2" Text="Code:" VerticalAlignment="Top" FontSize="28" Width="154" />
             <TextBox Height="72" HorizontalAlignment="Left" Margin="88,133,0,0" Name="textBox2" Text="" VerticalAlignment="Top" Width="380" />
             <TextBlock FontSize="28" Height="41" HorizontalAlignment="Left" Margin="9,226,0,0" Name="textBlock3" Text="Times:" VerticalAlignment="Top" Width="154" />
             <Button Content="Add New" Height="72" HorizontalAlignment="Left" Margin="-12,273,0,0" Name="button2" VerticalAlignment="Top" Width="160" Click="button2_Click" />
+            <ListBox Height="410" HorizontalAlignment="Left" Margin="154,226,0,0" Name="listBox1" VerticalAlignment="Top" Width="302" />
         </Grid>
     </Grid>
  

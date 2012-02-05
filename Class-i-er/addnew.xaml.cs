@@ -15,9 +15,17 @@ namespace Class_i_er
 {
     public partial class addnew : PhoneApplicationPage
     {
+        int i = 0;
         public addnew()
         {
             InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            if (NavigationContext.QueryString.TryGetValue("start", out starttime
+            if (NavigationContext.QueryString.TryGetValue("selectedItem", out selectedIndex))
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -32,7 +40,7 @@ namespace Class_i_er
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/TimeSlot.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/TimeSelection.xaml", UriKind.Relative));
         }
     }
 
