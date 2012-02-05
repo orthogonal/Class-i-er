@@ -67,22 +67,23 @@ namespace Class_i_er
                 Piv.Items.Add(daysPanels[i]);
             }
 
-            var classids = (from c in MainPage.mydatabase.ClassItems
-                            select c.id);
-            foreach (int id in classids)
+            IEnumerable<ClassTime> selection = (from c in MainPage.mydatabase.ClassTimes select c);
+            foreach (ClassTime row in selection)
             {
                 TextBox foo = new TextBox();
-                var namesel = (from c in MainPage.mydatabase.ClassItems where c.id == id select c.className);
-                var codesel = (from c in MainPage.mydatabase.ClassItems where c.id == id select c.classCode);
+                var namesel = (from c in MainPage.mydatabase.ClassItems where c.id == row.id select c.className);
+                var codesel = (from c in MainPage.mydatabase.ClassItems where c.id == row.id select c.classCode);
+
                 foreach (String name in namesel)
                 {
                     foreach (String code in codesel)
                     {
+
                         foo.Text = " " + name + "\n\r" + code;
                         foo.Width = 440;
                         foo.Height = 200;
                         foo.Background = new SolidColorBrush(Colors.Blue);
-                        ((ListBox)((Grid)daysPanels[1].Content).Children[0]).Items.Add(foo);
+                        ((ListBox)((Grid)daysPanels[row.day].Content).Children[0]).Items.Add(foo);
                     }
                 }
             }

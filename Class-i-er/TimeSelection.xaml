@@ -28,12 +28,12 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-        	<toolkit:TimePicker Margin="0,346,81,289" HorizontalAlignment="Right" Width="143"/>
-        	<toolkit:ListPicker HorizontalAlignment="Right" Height="101" Margin="0,223,48,0" VerticalAlignment="Top" Width="176">
+        	<toolkit:TimePicker Margin="0,346,81,289" HorizontalAlignment="Right" Width="143" Name="startTime" />
+        	<toolkit:ListPicker HorizontalAlignment="Right" Height="101" Margin="0,223,48,0" VerticalAlignment="Top" Width="176" Name="semester">
         		<toolkit:ListPickerItem Content="Fall"/>
         		<toolkit:ListPickerItem Content="Spring"/>
         	</toolkit:ListPicker>
-        	<toolkit:ListPicker HorizontalAlignment="Right" Height="101" Margin="0,122,48,0" VerticalAlignment="Top" Width="176">
+        	<toolkit:ListPicker HorizontalAlignment="Right" Height="101" Margin="0,122,48,0" VerticalAlignment="Top" Width="176" Name="year">
         		<toolkit:ListPickerItem x:Name="_2011" Content="2011"/>
         		<toolkit:ListPickerItem x:Name="_2012" Content="2012"/>
         		<toolkit:ListPickerItem x:Name="_2013" Content="2013"/>
@@ -41,15 +41,15 @@
         	<TextBox HorizontalAlignment="Left" Margin="31,223,0,0" TextWrapping="Wrap" Text="Semester" Width="155" Background="#BF000000" Foreground="DeepSkyBlue" Height="80" VerticalAlignment="Top" FontSize="29.333" BorderBrush="#BF000000" BorderThickness="0"/>
         	<TextBox HorizontalAlignment="Left" Margin="31,122,0,0" TextWrapping="Wrap" Text="Year" Width="155" Background="#BF000000" Foreground="DeepSkyBlue" Height="80" VerticalAlignment="Top" FontSize="29.333" BorderBrush="#BF000000" BorderThickness="0"/>
         	<TextBox HorizontalAlignment="Left" Margin="31,327,0,289" TextWrapping="Wrap" Text="Start Time" Width="164" Background="#BF000000" Foreground="DeepSkyBlue" FontSize="29.333" BorderBrush="#BF000000" BorderThickness="0"/>
-        	<Button Content="Return" Height="71" Margin="117,0,145,8" VerticalAlignment="Bottom" Foreground="DeepSkyBlue" BorderBrush="Black" Click="Button_Click" />
-        	<Button Content="Su" Height="80" Margin="-2,0,0,83" VerticalAlignment="Bottom" Foreground="DeepSkyBlue" BorderBrush="DeepSkyBlue" HorizontalAlignment="Left" Width="80" BorderThickness="1,0,0,1"/>
-        	<Button Content="Mo" Height="80" Margin="54,0,0,83" VerticalAlignment="Bottom" Foreground="DeepSkyBlue" BorderBrush="DeepSkyBlue" HorizontalAlignment="Left" Width="80" BorderThickness="1,0,0,1"/>
-        	<Button Content="Tu" Height="80" Margin="110,0,0,83" VerticalAlignment="Bottom" Foreground="DeepSkyBlue" BorderBrush="DeepSkyBlue" HorizontalAlignment="Left" Width="80" BorderThickness="1,0,0,1"/>
-        	<Button Content="We" Height="80" Margin="166,0,210,83" VerticalAlignment="Bottom" Foreground="DeepSkyBlue" BorderBrush="DeepSkyBlue" BorderThickness="1,0,0,1"/>
-        	<Button Content="Th" Height="80" Margin="222,0,154,83" VerticalAlignment="Bottom" Foreground="DeepSkyBlue" BorderBrush="DeepSkyBlue" BorderThickness="1,0,0,1"/>
-        	<Button Content="Fr" Height="80" Margin="0,0,98,83" VerticalAlignment="Bottom" Foreground="DeepSkyBlue" BorderBrush="DeepSkyBlue" HorizontalAlignment="Right" Width="80" BorderThickness="1,0,0,1"/>
-        	<Button Content="Sa" Height="80" Margin="0,0,42,83" VerticalAlignment="Bottom" Foreground="DeepSkyBlue" BorderBrush="DeepSkyBlue" HorizontalAlignment="Right" Width="80" BorderThickness="1,0,0,1"/>
-        	<toolkit:TimePicker Margin="0,0,81,209" HorizontalAlignment="Right" Width="143" Height="61" VerticalAlignment="Bottom"/>
+            <Button  Content="Return" Height="71" Margin="117,0,145,8" VerticalAlignment="Bottom" Foreground="DeepSkyBlue" Background="Black" BorderBrush="Black" Click="Button_Click" />
+            <Button Name="sun" Content="Su" Height="80" Margin="-2,0,0,83" VerticalAlignment="Bottom" Foreground="DeepSkyBlue" Background="Black" BorderBrush="DeepSkyBlue" HorizontalAlignment="Left" Width="80" Opacity="100" BorderThickness="1,0,0,1" Click="day_click"/>
+            <Button Name="mon" Content="Mo" Height="80" Margin="54,0,0,83" VerticalAlignment="Bottom" Foreground="DeepSkyBlue" Background="Black" BorderBrush="DeepSkyBlue" HorizontalAlignment="Left" Width="80" Opacity="100" BorderThickness="1,0,0,1" Click="day_click"/>
+            <Button Name="tue" Content="Tu" Height="80" Margin="110,0,0,83" VerticalAlignment="Bottom" Foreground="DeepSkyBlue" Background="Black" BorderBrush="DeepSkyBlue" HorizontalAlignment="Left" Width="80" Opacity="100" BorderThickness="1,0,0,1" Click="day_click"/>
+            <Button Name="wed" Content="We" Height="80" Margin="166,0,210,83" VerticalAlignment="Bottom" Foreground="DeepSkyBlue" Background="Black" BorderBrush="DeepSkyBlue" BorderThickness="1,0,0,1" Opacity="100" Click="day_click"/>
+            <Button Name="thu" Content="Th" Height="80" Margin="222,0,154,83" VerticalAlignment="Bottom" Foreground="DeepSkyBlue" Background="Black" BorderBrush="DeepSkyBlue" BorderThickness="1,0,0,1" Opacity="100" Click="day_click" />
+            <Button Name="fri" Content="Fr" Height="80" Margin="0,0,98,83" VerticalAlignment="Bottom" Foreground="DeepSkyBlue" Background="Black" BorderBrush="DeepSkyBlue" HorizontalAlignment="Right" Width="80" Opacity="100" BorderThickness="1,0,0,1" Click="day_click"/>
+            <Button Name="sat" Content="Sa" Height="80" Margin="0,0,42,83" VerticalAlignment="Bottom" Foreground="DeepSkyBlue" Background="Black" BorderBrush="DeepSkyBlue" HorizontalAlignment="Right" Width="80" Opacity="100" BorderThickness="1,0,0,1" Click="day_click"/>
+        	<toolkit:TimePicker Margin="0,0,81,209" HorizontalAlignment="Right" Width="143" Height="61" VerticalAlignment="Bottom" Name="endTime" />
         	<TextBox HorizontalAlignment="Left" Margin="31,0,0,205" TextWrapping="Wrap" Text="End Time" Width="164" Background="#BF000000" Foreground="DeepSkyBlue" FontSize="29.333" BorderBrush="#BF000000" BorderThickness="0" Height="80" VerticalAlignment="Bottom"/>
 </Grid>
     </Grid>

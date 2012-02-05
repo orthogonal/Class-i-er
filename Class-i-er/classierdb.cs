@@ -37,11 +37,12 @@ namespace Class_i_er
     [TableAttribute(Name = "ClassTimes")]
     public class ClassTime
     {
-        [ColumnAttribute(IsDbGenerated = false)]
+        [ColumnAttribute(IsPrimaryKey = true, DbType = "int not null Identity", IsDbGenerated = true)]
         public int id {get; set; }
+        [ColumnAttribute(IsDbGenerated = false)]
         public int day {get; set; }
-        public int start {get; set; }
-        public int finish {get; set; }
+        public String start {get; set; }
+        public String finish {get; set; }
     }
 
     [TableAttribute(Name = "Temps")]
@@ -51,6 +52,7 @@ namespace Class_i_er
         public int id {get; set; }
         [ColumnAttribute(IsDbGenerated = false)]
         public int day {get; set; }
-        public short start {get; set; }
+        public String start {get; set; }
+        public String finish { get; set; }
     }
 }
