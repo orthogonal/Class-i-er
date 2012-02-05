@@ -22,7 +22,7 @@ namespace Class_i_er
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/addnew.xaml&monday=true&tuesday=false&start=1000&end=2000", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/addnew.xaml?start=1000", UriKind.Relative));
         }
     }
 }

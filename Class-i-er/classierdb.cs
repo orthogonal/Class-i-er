@@ -19,7 +19,9 @@ namespace Class_i_er
         // Pass the connection string to the base class. 
         public ClassierDataContext(string connectionString) : base(connectionString) { } 
         // Specify a single table for the to-do items. 
-        public Table<ClassItem> ClassItems; 
+        public Table<ClassItem> ClassItems;
+        public Table<ClassTime> ClassTimes;
+        public Table<Temporary> Temps;
     }
 
     [TableAttribute(Name = "ClassItems")]
@@ -32,21 +34,23 @@ namespace Class_i_er
         public string classCode { get; set; }
     }
 
-    [TableAttribute(Name = "ClassItems")]
+    [TableAttribute(Name = "ClassTimes")]
     public class ClassTime
     {
+        [ColumnAttribute(IsDbGenerated = false)]
         public int id {get; set; }
         public int day {get; set; }
         public int start {get; set; }
         public int finish {get; set; }
     }
 
-    [TableAttribute(Name = "ClassItems")]
+    [TableAttribute(Name = "Temps")]
     public class Temporary
     {
+        [ColumnAttribute(IsPrimaryKey = true, DbType = "int not null Identity", IsDbGenerated = true)]
         public int id {get; set; }
+        [ColumnAttribute(IsDbGenerated = false)]
         public int day {get; set; }
-        public int start {get; set; }
-        public int finish {get; set; }
+        public short start {get; set; }
     }
 }
